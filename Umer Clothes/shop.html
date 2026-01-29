@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | UMER CLOTHES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<style>
+    .shop-header {
+        padding: 120px 5% 40px;
+        background: white;
+    }
+
+    .filter-bar {
+        padding: 20px 5%;
+        border-bottom: 1px solid #f5f5f7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 60px;
+        background: white;
+        z-index: 1100;
+        pointer-events: auto;
+    }
+
+    .filters {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .filter-item {
+        cursor: pointer;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+        background: none;
+        border: 1px solid transparent;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-family: inherit;
+        font-size: 14px;
+    }
+
+    .filter-item:hover {
+        color: black;
+        background: #f5f5f7;
+    }
+
+    .filter-item.active {
+        color: white;
+        background: black;
+        border-color: black;
+    }
+
+    .shop-grid {
+        padding: 40px 5%;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                UMER CLOTHES
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://wa.me/923450731223" target="_blank" class="active">Shop</a></li>
+                <li><a href="shop.html">Categories</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg></a>
+                <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 2L3 6v14a2 0 0 0 2 2h14a2 0 0 0 2-2V6l-3-4Z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="shop-header">
+        <h1>All Products</h1>
+        <p style="color: var(--text-secondary); margin-top: 10px;">Modern essentials for your collection.</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filters">
+            <button class="filter-item active" data-filter="all">All Products</button>
+            <button class="filter-item" data-filter="t-shirts">T-Shirts</button>
+            <button class="filter-item" data-filter="trousers">Trousers</button>
+        </div>
+        <div class="sort">
+            <select style="border: none; background: none; font-family: inherit; font-size: 14px; cursor: pointer;">
+                <option>Sort by: Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <main class="shop-grid">
+        <div class="product-grid">
+            <!-- T-Shirts (10) -->
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Luxury White Cotton Tee</div>
+                    <div class="product-price">$45.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Sleek Midnight Black Tee</div>
+                    <div class="product-price">$50.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1562157873-818bc0726f68?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Classic Heather Grey Tee</div>
+                    <div class="product-price">$45.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Deep Navy Essential Tee</div>
+                    <div class="product-price">$48.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Modern Olive Slub Tee</div>
+                    <div class="product-price">$45.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Urban Oversized Cream Tee</div>
+                    <div class="product-price">$55.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Basic Organic White Tee</div>
+                    <div class="product-price">$35.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Ultra-Soft Pima Cotton Tee</div>
+                    <div class="product-price">$60.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1596755094514-f87034a26ef4?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Breton Striped Knit Tee</div>
+                    <div class="product-price">$52.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="t-shirts">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1618354691229-88d47f285158?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's T-Shirts</div>
+                    <div class="product-name">Classic Pocket Cotton Tee</div>
+                    <div class="product-price">$42.00</div>
+                </div>
+            </a>
+
+            <!-- Trousers (10) -->
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1624372333454-353f465774a3?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Executive Grey Slim Trouser</div>
+                    <div class="product-price">$85.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Modern Khaki Tailored Chinos</div>
+                    <div class="product-price">$75.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Midnight Navy Cotton Trouser</div>
+                    <div class="product-price">$80.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Premium Selvedge Denim</div>
+                    <div class="product-price">$120.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Jet Black Slim-Fit Chinos</div>
+                    <div class="product-price">$70.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1506629082925-fb405364826b?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Olive Green Cargo Trousers</div>
+                    <div class="product-price">$90.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1516826957135-700dedea698c?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Charcoal Formal Suit Trouser</div>
+                    <div class="product-price">$95.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1624372333454-353f465774a3?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Sand Beige Linen Trousers</div>
+                    <div class="product-price">$85.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Dark Brown Corduroy Trousers</div>
+                    <div class="product-price">$105.00</div>
+                </div>
+            </a>
+            <a href="product.html" class="product-card" data-category="trousers">
+                <div class="product-image"><img
+                        src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1200"></div>
+                <div class="product-info">
+                    <div class="product-category">Men's Trousers</div>
+                    <div class="product-name">Relaxed Fit Cotton Trousers</div>
+                    <div class="product-price">$65.00</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Simplified Footer -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 UMER CLOTHES. All rights reserved.</p>
+            <div class="logo">UMER CLOTHES</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

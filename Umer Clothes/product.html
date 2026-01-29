@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Essential Shirt | UMER CLOTHES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<style>
+    .product-detail-container {
+        padding: 120px 5% 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+
+    .product-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .gallery-img {
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        aspect-ratio: 1;
+        overflow: hidden;
+    }
+
+    .gallery-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-main-info h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .price-tag {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .product-description {
+        color: var(--text-secondary);
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
+
+    .selectors {
+        margin-bottom: 40px;
+    }
+
+    .selector-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .size-btns {
+        display: flex;
+        gap: 10px;
+    }
+
+    .size-btn {
+        width: 45px;
+        height: 45px;
+        border: 1px solid #e5e5e5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s;
+    }
+
+    .size-btn:hover,
+    .size-btn.active {
+        border-color: black;
+        background: black;
+        color: white;
+    }
+
+    .actions {
+        display: flex;
+        gap: 20px;
+    }
+
+    .btn-buy {
+        flex: 1;
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 18px;
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+    .btn-wishlist {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #e5e5e5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+        .product-detail-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                UMER CLOTHES
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://wa.me/923450731223" target="_blank">Shop</a></li>
+                <li><a href="shop.html">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-detail-container">
+        <div class="product-gallery">
+            <div class="gallery-img"><img
+                    src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200"></div>
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200"
+                    style="transform: scaleX(-1);"></div>
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200"
+                    style="filter: brightness(0.8);"></div>
+            <div class="gallery-img"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200"
+                    style="opacity: 0.8;"></div>
+        </div>
+
+        <div class="product-main-info">
+            <div class="product-category" style="margin-bottom: 5px;">Men's Premium T-shirts</div>
+            <h1>Essential Cotton T-Shirt</h1>
+            <div class="price-tag">$49.00</div>
+
+            <p class="product-description">
+                Elevate your wardrobe with our signature Oxford Essential Shirt. Crafted from 100% premium Egyptian
+                cotton, this piece offers a refined silhouette and unparalleled comfort. Designed for the modern
+                minimalist, it transitions seamlessly from day to night.
+            </p>
+
+            <div class="selectors">
+                <div class="selector-title">Select Size</div>
+                <div class="size-btns">
+                    <div class="size-btn">S</div>
+                    <div class="size-btn active">M</div>
+                    <div class="size-btn">L</div>
+                    <div class="size-btn">XL</div>
+                </div>
+            </div>
+
+            <div class="selectors">
+                <div class="selector-title">Fabric Details</div>
+                <p style="font-size: 14px; color: var(--text-secondary);">100% Organic Cotton. Breathable, durable, and
+                    ethically sourced.</p>
+            </div>
+
+            <div class="actions">
+                <a href="https://wa.me/923450731223" target="_blank" class="btn-buy">Order via WhatsApp</a>
+                <div class="btn-wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.84-8.84 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UMER CLOTHES. All rights reserved.</p>
+            <div class="logo">UMER CLOTHES</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
